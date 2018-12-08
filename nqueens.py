@@ -50,11 +50,13 @@ class nqueens:
             ins = solutions.insert().values(n=self.n, sol=",".join([str(i) for i in solution]))
             engine.execute(ins)            
 
-## Example: Insert all 8 queens solutions into db:
+##
+#### Example: Insert all 8 queens solutions into db:
+##
+## nq = nqueens()
+##
+## nq.solve(8) # returns a generator of solutions, also saves generator of n queens inside object
+##             # that can then be committed to db
+##            
+## nq.psql_commit("postgres", "fl33021", "queens")
 
-nq = nqueens()
-
-nq.solve(8) # returns a generator of solutions, also saves generator of n queens inside object
-            # that can then be committed to db
-            
-nq.psql_commit("postgres", "fl33021", "queens")
