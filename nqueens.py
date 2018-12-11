@@ -1,15 +1,9 @@
 from sqlalchemy import *  ## Our poor, poor global namespace
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import os
 
-
-PSQL_USER = 'postgres'
-PSQL_PASS = ''
-PSQL_DB   = 'db'
-PSQL_PORT = 5432
-
-engine = create_engine('postgresql://%s:%s@localhost:%i/%s' %
-                               (PSQL_USER, PSQL_PASS, PSQL_PORT, PSQL_DB))
+engine = create_engine(os.environ['DB_URI'])
 
 Base = declarative_base()
 
