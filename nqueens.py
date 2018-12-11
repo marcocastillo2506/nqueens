@@ -69,5 +69,5 @@ def psqlize_queens(n, queen_generator):
 ##
 ##
 ##  Now, psql_insert_queens returns the session object (which is also creates, which is bad design, but anyway)
-##  which is consequential, because it allows us to continue querying the db. This is great for our tests!
+##  which is consequential, because it allows us to continue querying the db. This is useful for our tests!
 
