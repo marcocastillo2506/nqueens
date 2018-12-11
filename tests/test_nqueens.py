@@ -11,4 +11,5 @@ def test_nq():
     # incomprehensible mess. Looking at the proceeding line reminds
     # me of why Haskell and Lisp not only will not, but do not deserve,
     # to ever become mainstream industrial programming languages.
-    assert False not in map(lambda x: psql_insert_queens(x, nqueens(x)).query(Solution).filter_by.count() == sol_sizes[x-1])
+    assert False not in map(lambda x: psql_insert_queens(x, nqueens(x)).query(Solution).filter_by.count() == sol_sizes[x-1],
+                            range(1, from_n+1))
