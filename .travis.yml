@@ -1,5 +1,5 @@
 env:
-  DB_URI='postgresql://postgres:@localhost:5432/db'
+  - DB_URI='postgresql://postgres:@localhost:5432/db'
 language: python
 python:
   - "3.5"
