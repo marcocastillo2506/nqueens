@@ -44,7 +44,7 @@ def nqueens(n, past=None):
                     yield from nqueens(n,past + [pos])
 
 
-def psql_insert_queens(n, queen_generator):
+def psqlize_queens(n, queen_generator):
     Base.metadata.create_all(engine)
 
     Session = sessionmaker()
