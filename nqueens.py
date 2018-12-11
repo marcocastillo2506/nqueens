@@ -16,9 +16,8 @@ Base = declarative_base()
 class Solution(Base):
     __tablename__ = 'solutions'
 
-    id = Column(Integer, primary_key=True)
     n = Column(Integer)
-    sol = Column(VARCHAR(512))
+    sol = Column(VARCHAR(512), primary_key=True)
 
     def __repr__(self):
         return "<User(n='%s', sol='%s')>" % (
@@ -54,12 +53,11 @@ def psql_insert_queens(n, queen_generator):
 
     for sol in queen_generator:
         solution = Solution(n=n, sol=",".join(map(str, sol)))
-        session.add(solution)
+        session.merge(solution)
 
     session.commit()
 
     return session
-
 
 ##
 #### Example: Insert all 8 queens solutions into db:
