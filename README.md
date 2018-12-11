@@ -5,7 +5,7 @@ add tests for all kinds of stuff.<br>
 Dockerize<p>
 Tests: https://travis-ci.org/seisvelas/nqueens <p>
 
-Original Text of Challenge<p>
+<b>Original Text of Challenge</b><p>
 Here's the programming problem: https://en.wikipedia.org/wiki/Eight_queens_puzzle<p>
 
 These are the different aspect of the project you can work on (in order):<br>
